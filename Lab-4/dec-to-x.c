@@ -2,11 +2,13 @@
 
 int main()
 {
-	long decimalnum, remainder, quotient;
+	long decimalnum, quotient;
 	int converted[100], i = 1, j;
-	int base = 16;
+	int base;
 
-	scanf("%ld", &decimalnum);
+
+
+	scanf("%ld %d", &decimalnum, &base);
 	quotient = decimalnum;
 	while (quotient != 0)
 	{
