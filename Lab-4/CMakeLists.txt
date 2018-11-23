@@ -5,3 +5,4 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(dec-to-x dec-to-x.c)
 add_executable(bin-to-x bin-to-x.c)
+add_executable(x-to-dec x-to-dec.c)
