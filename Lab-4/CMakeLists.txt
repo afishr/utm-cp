@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
-project(Lab_4 C)
+project(Lab-4 C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(Lab_4 main.c)
+add_executable(dec-to-x dec-to-x.c)
+add_executable(bin-to-x bin-to-x.c)
