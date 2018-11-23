@@ -15,11 +15,11 @@ int main()
 
 
 	quotient = decpart;
-	while (quotient != 0)
+	do
 	{
 		converted[i++] = quotient % base;
 		quotient = quotient / base;
-	}
+	} while (quotient != 0);
 
 	point = i++;
 	while (realpart != 0.0)

@@ -10,11 +10,11 @@ int main()
 
 	scanf("%ld %d", &decimalnum, &base);
 	quotient = decimalnum;
-	while (quotient != 0)
+	do
 	{
 		converted[i++] = quotient % base;
 		quotient = quotient / base;
-	}
+	} while (quotient != 0);
 
 	for (j = i - 1; j > 0; j--)
 		printf("%X", converted[j]);
