@@ -11,3 +11,5 @@ add_executable(x-to-bin x-to-bin.c)
 add_executable(x-to-dreal x-to-dreal.c)
 add_executable(breal-to-x breal-to-x.c)
 add_executable(x-to-breal x-to-breal.c)
+
+add_executable(b3-1 b3-1.c)
