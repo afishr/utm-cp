@@ -61,8 +61,8 @@ int main()
 		lon = len2;
 	}
 
-	big[lon-1] = '0';
-	big[lon] = '\0';
+/*	big[lon-1] = '0';
+	big[lon] = '\0';*/
 
 	int i;
 	int rem = 0;
