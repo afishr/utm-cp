@@ -22,7 +22,7 @@ int main()
 	} while (quotient != 0);
 
 	point = i++;
-	while (realpart != 0.0)
+	while (realpart != 0.0 && ((i - point) <= 8))
 	{
 		realpart *= base;
 		int temp = (int)(realpart);
@@ -30,16 +30,18 @@ int main()
 		realpart = realpart - temp;
 	}
 
-	for (int j = 1; j < i; j++)
+	for (int j = point - 1; j > 0; j--)
 	{
 		if (j != point)
 			printf("%X", converted[j]);
-		else
-			printf(".");
 	}
+	printf(".");
 
-
-
+	for (int j = i - 1; j > point; j--)
+	{
+		if (j != point)
+			printf("%X", converted[j]);
+	}
 
 	return 0;
 }
