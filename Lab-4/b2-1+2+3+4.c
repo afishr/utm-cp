@@ -41,34 +41,6 @@ int main()
 	fclose(fin);
 
 	int len1 = declen(init1), len2 = declen(init2);
-	/*
-	for (int i = 0; init1[i] != '\0'; i++)
-	{
-		temp = init1[i] - 48;
-
-		dec1 += (temp) * pow(2, len1--);
-	}
-
-	for (int i = 0; init2[i] != '\0'; i++)
-	{
-		temp = init2[i] - 48;
-
-		dec2 += (temp) * pow(2, len2--);
-	}
-
-	long long int quotient, res = dec1 + dec2;
-	int i = 1;
-	long long int *converted = malloc(200 * sizeof(int));
-
-	quotient = res;
-	do
-	{
-		converted[i++] = quotient % 2;
-		quotient = quotient / 2;
-	} while (quotient != 0);
-
-	for (int j = i - 1; j > 0; j--)
-		printf("%lld", converted[j]);*/
 
 	init1 = rev(init1, len1);
 	init2 = rev(init2, len2);
@@ -120,6 +92,5 @@ int main()
 
 	free(init1);
 	free(init2);
-//	free(converted);
 	return 0;
 }
