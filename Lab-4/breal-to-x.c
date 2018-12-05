@@ -43,7 +43,7 @@ int main()
 	}
 
 	float real = decimal;
-	long int quotient;
+	long long int quotient;
 	int converted[100], i = 1;
 	int point;
 
@@ -67,13 +67,21 @@ int main()
 		realpart = realpart - temp;
 	}
 
-	for (int j = 1; j < i; j++)
+
+
+	for (int j = point - 1; j > 0; j--)
 	{
-		if (j != point)
-			printf("%X", converted[j]);
-		else
-			printf(".");
+		printf("%X", converted[j]);
 	}
+
+	printf(".");
+
+	for (int j = i - 1; j > point; j--)
+	{
+		printf("%X", converted[j]);
+	}
+
+
 
 	free(init);
 	return 0;

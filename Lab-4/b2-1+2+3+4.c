@@ -32,7 +32,7 @@ int main()
 
 	long long int dec1 = 0, dec2 = 0;
 	int temp;
-	char *init1 = calloc(201, sizeof(char)), *init2 = calloc(201, sizeof(char));
+	char *init1 = calloc(201, sizeof(char)), *init2 = calloc(201, sizeof(char)), *tmp = calloc(201, sizeof(char));
 	char *res = calloc(201, sizeof(char));
 
 	fscanf(fin, "%s", init1);
@@ -49,16 +49,27 @@ int main()
 
 	char *big;
 	int lon;
+	int flag = 0;
 
 	if (len1 >= len2)
 	{
 		big = init1;
 		lon = len1;
+		flag = 0;
 	}
 	else
 	{
+		flag = 1;
 		big = init2;
 		lon = len2;
+
+	}
+
+	if (flag) {
+		tmp = init1;
+		init1 = init2;
+		init2 = tmp;
+
 	}
 
 /*	big[lon-1] = '0';
@@ -68,7 +79,10 @@ int main()
 	int rem = 0;
 	for (i = 0; big[i] != '\0'; i++)
 	{
-		int temp1 = init1[i], temp2 =init2[i];
+		int temp1, temp2;
+
+		temp1 = init1[i];
+		temp2 =init2[i];
 
 		if (temp1)
 			temp1 -= 48;
@@ -78,7 +92,6 @@ int main()
 
 		res[i] = (char)((abs(temp1 - temp2 + rem) % 2) + 48);
 
-
 		/*if ((temp1 && temp2) || (temp1 && rem) || (temp2 && rem))*/
 
 		if ((!temp1 && temp2) || (!(temp1 - temp2) && rem != 0))
@@ -87,6 +100,10 @@ int main()
 			rem = 0;
 	}
 
+	if (flag)
+	{
+		printf("-");
+	}
 	printf("%s", rev(res, declen(res)));
 
 
